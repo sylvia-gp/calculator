@@ -18,10 +18,14 @@ body {
 
 #screen {;
     text-align: center;
-    border: 2px solid;
     border-radius: 3%;
     margin-left: 20px;
     margin-right: 20px;
+}
+
+input{
+    height: 20px;
+    width: 250px;
 }
 
 #buttons {
