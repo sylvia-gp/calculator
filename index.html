@@ -8,46 +8,43 @@
 </head>
 
 <body>
-  <table id = 'calculator'>
-      <thead>
-        <tr>
-          <th colspan="4">Sylvia's Calculator</th>
-        </tr>
-      </thead>
-        <tr>
-          <td id = 'screen' colspan="4"> Come back to me </td>
-        </tr>
-      <tbody id = 'buttons'>
-              <tr>
-                <td> AC </td>
-                <td> % </td>
-                <td> / </td>
-                <td> * </td>
-              </tr>
-              <tr>
-                <td> 7 </td>
-                <td> 8 </td>
-                <td> 9 </td>
-                <td rowspan="2"> - </td>
-              </tr>
-              <tr>
-                <td> 4 </td>
-                <td> 5 </td>
-                <td> 6 </td>
-              </tr>
-              <tr>
-                <td> 1 </td>
-                <td> 2 </td>
-                <td> 3 </td>
-                <td rowspan="2"> + </td>
-              </tr>
-              <tr>
-                <td> 0 </td>
-                <td> . </td>
-                <td> = </td>
-              </tr>
-      </tbody>
-      </table>
+  <div id = 'calculator'>
+    <div id="title">
+      <h2>Sylvia's Calculator</h2>
+    </div>
+    <div id = 'screen'> 
+      <p>
+        Come back to me
+      </p>
+    </div>
+    <div id = 'buttons'>
+      <div class = button-row>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button>/</button>
+      </div>
+      <div class = button-row>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>*</button>
+      </div>
+      <div class = button-row>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>-</button>
+      </div>
+      <div class = button-row>
+        <button>0</button>
+        <button>.</button>
+        <button>=</button>
+        <button>+</button>
+      </div>
+      <div class = button-clear>
+        <button>Clear</button>
+      </div>
   </div>
 </body>
 </html>
