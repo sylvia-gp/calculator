@@ -1,0 +1,75 @@
+body {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#calculator {
+    border: 5px inset #0e2d15;
+    border-radius: 3%;
+    display: inline-block;
+    min-width: 300px;
+    max-width: 1200px;
+    min-height: 450px;
+    box-shadow: 5px 6px 9px;
+    background: #164417;
+    background: -moz-linear-gradient(-45deg, #164417 0%, #2DD580 38%, #174727 100%);
+    background: -webkit-linear-gradient(-45deg, #c6e8c7 0%, #2DD580 38%, #174727 100%);
+    background: linear-gradient(135deg, #5d4e84 0%, #2DD580 38%, #174727 100%);
+    padding-bottom: 10px;
+}
+
+#title {
+    font-size: 23px;
+    font-family: Impact, sans-serif;
+    background-color: #000000c9;
+    color: transparent;
+    text-shadow: 2px 2px 3px rgba(130, 148, 125, 0.5);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+     background-clip: text;
+}
+
+#display {;
+    text-align: center;
+    border-radius: 3%;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: inset;
+    text-align: right;
+    padding-right: 10px;
+    font-size: 25px;
+    box-shadow: inset 2px 3px 4px;
+    font-family: courier;
+    font-weight: 700;
+    background: #E5E5E5;
+    background: -moz-linear-gradient(left, #E5E5E5 0%, #CECECE 38%, #BEBEB8 100%);
+    background: -webkit-linear-gradient(left, #E5E5E5 0%, #CECECE 38%, #BEBEB8 100%);
+    background: linear-gradient(to right, #E5E5E5 0%, #CECECE 38%, #BEBEB8 100%);
+    color: #141414;
+    text-shadow: 0 0 5px #c5b5b500, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #92bb86, 0 0 30px #a79035, 0 0 40px #49ff18, 0 0 55px #49FF18, 0 0 75px #49ff18
+   }
+
+p {
+    height: 30px;
+    width: 250px;
+}
+
+#buttons {
+    margin-top: 20px;
+}
+
+.button-clear{
+    width: 200px;
+}
+
+button {
+    font-size: 40px;
+    width: 50px;
+    margin: 5px;
+    border-radius: 5%; 
+    border-radius: 10px;   
+    background-image: linear-gradient(135deg, rgba(32, 22, 68, 0.4) 0%, rgb(45, 213, 128) 38%, rgb(23, 71, 39) 100%); 
+    box-shadow: rgba(0, 0, 0, 0.73) 5px 5px 6px; 
+    border: 2px inset rgb(58, 111, 146); 
+    display: inline-block;
+}

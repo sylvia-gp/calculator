@@ -1,0 +1,46 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <title>Calculator</title>
+  <link href="styles/main.css" type="text/css" rel="stylesheet">
+  <script type="text/javascript" src="calculator.js"></script>
+</head>
+
+<body>
+  <div id = 'calculator'>
+    <div id="title">
+      <h2>Sylvia's Calculator</h2>
+    </div> 
+  <p id= "display"></p>
+    <div id = 'buttons'>
+      <div class = button-row>
+        <button onclick="buttonEval(7)">7</button>
+        <button onclick="buttonEval(8)">8</button>
+        <button onclick="buttonEval(9)">9</button>
+        <button onclick="buttonEval('/')">/</button>
+      </div>
+      <div class = button-row>
+        <button onclick="buttonEval(4)">4</button>
+        <button onclick="buttonEval(5)">5</button>
+        <button onclick="buttonEval(6)">6</button>
+        <button onclick="buttonEval('*')">*</button>
+      </div>
+      <div class = button-row>
+        <button onclick="buttonEval(1)">1</button>
+        <button onclick="buttonEval(2)">2</button>
+        <button onclick="buttonEval(3)">3</button>
+        <button onclick="buttonEval('-')">-</button>
+      </div>
+      <div class = button-row>
+        <button onclick="buttonEval(0)">0</button>
+        <button onclick="buttonEval('.')">.</button>
+        <button onclick="buttonEval('=')">=</button>
+        <button onclick="buttonEval('+')">+</button>
+      </div>
+      <div>
+        <button class = 'button-clear', onclick="buttonEval('clear')">Clear</button>
+      </div>
+  </div>
+</body>
+</html>
