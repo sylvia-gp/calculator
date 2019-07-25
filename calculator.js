@@ -7,11 +7,15 @@ function screenText(text) {
     screen.innerHTML = text
 }
 
+function numberVal(num){
+    temp.push(num);
+    estabScreen(temp.join(''));
+}
+
 function buttonEval(num){
     var screen = document.getElementById('display')
     if (typeof num === 'number' || num === '.'){
-        temp.push(num)
-        screen.innerHTML = temp.join('');
+        numberVal(num)
     } else if (num === 'clear'){
         screen.innerHTML = '';
         temp = [];
