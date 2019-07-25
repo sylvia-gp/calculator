@@ -25,6 +25,12 @@ function equalsVal(num){
     temp = []
 }
 
+function clearVal(){
+    screenText('')
+    temp = []
+    equation = []
+}
+
 function buttonEval(num){
     var screen = document.getElementById('display')
     if (typeof num === 'number' || num === '.'){
@@ -51,8 +57,6 @@ function buttonEval(num){
             }
         }
     } else if (num === 'clear'){
-        screen.innerHTML = '';
-        temp = [];
-        equation = [];
+        clearVal()
     }
 }
