@@ -2,6 +2,11 @@ equation = [];
 total = 0;
 temp = [];
 
+function screenText(text) {
+    var screen = document.getElementById('display')
+    screen.innerHTML = text
+}
+
 function buttonEval(num){
     var screen = document.getElementById('display')
     if (typeof num === 'number' || num === '.'){
