@@ -1,6 +1,7 @@
 equation = [];
-total = 0;
 temp = [];
+finalNum = '';
+
 
 function screenText(text) {
     var screen = document.getElementById('display')
@@ -18,18 +19,20 @@ function operatorVal(num){
     temp = []
 }
 
+function equalsVal(num){
+    finalNum = temp.join('')
+    equation.push(finalNum)
+    temp = []
+}
+
 function buttonEval(num){
     var screen = document.getElementById('display')
     if (typeof num === 'number' || num === '.'){
         numberVal(num)
-    } else if (num === 'clear'){
-        screen.innerHTML = '';
-        temp = [];
-        equation = [];
+    } else if (num === '-' || num === '+' || num === '/' || num === '*'){
+        operatorVal(num)
     } else if (num === '=') {
-        final = temp.join('')
-        equation.push(final);
-        temp = [];
+        equalsVal(num)
         firstNum = Number(equation[0])
         for(var i=1;i<equation.length;i++){
             var operator = equation[i]
@@ -47,7 +50,9 @@ function buttonEval(num){
                 screen.innerHTML = firstNum;
             }
         }
-    } else {
-        operatorVal(num)
+    } else if (num === 'clear'){
+        screen.innerHTML = '';
+        temp = [];
+        equation = [];
     }
 }
