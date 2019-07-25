@@ -1,6 +1,7 @@
 equation = [];
 temp = [];
 finalNum = '';
+answer = ''
 
 
 function screenText(text) {
@@ -19,7 +20,7 @@ function operatorVal(num){
     temp = []
 }
 
-function equalsVal(num){
+function equalsVal(){
     finalNum = temp.join('')
     equation.push(finalNum)
     temp = []
@@ -31,6 +32,22 @@ function clearVal(){
     equation = []
 }
 
+function totalVal(){
+    firstNum = Number(equation[0])
+    for (i=1;i<equation.length;i++){
+        secondVal = Number(equation[i+1])
+        if (equation[i] === '+'){
+           var total = (firstNum += secondVal)
+        } else if (equation[i] === '-'){
+            total = (firstNum += secondVal)
+        } else if (equation[i] === '/'){
+            total = (firstNum /= secondVal)
+        } else if (equation[i] === '*'){
+            total = (firstNum *= secondVal)
+        }
+    } screenText(total)
+}
+
 function buttonEval(num){
     var screen = document.getElementById('display')
     if (typeof num === 'number' || num === '.'){
@@ -39,23 +56,7 @@ function buttonEval(num){
         operatorVal(num)
     } else if (num === '=') {
         equalsVal(num)
-        firstNum = Number(equation[0])
-        for(var i=1;i<equation.length;i++){
-            var operator = equation[i]
-            var secondVal = Number(equation[i+1]);
-            if (operator === '+'){
-                firstNum += secondVal
-                console.log(firstNum)
-            } else if (operator === '-'){
-                firstNum -= secondVal
-            } else if (operator === '*'){
-                firstNum *= secondVal
-            } else if (operator === '/'){
-                firstNum /= secondVal
-            } else {
-                screen.innerHTML = firstNum;
-            }
-        }
+        totalVal()
     } else if (num === 'clear'){
         clearVal()
     }
