@@ -1,8 +1,20 @@
 equation = [];
 temp = [];
 finalNum = '';
-answer = ''
 
+function buttonEval(num){
+    var screen = document.getElementById('display')
+    if (typeof num === 'number' || num === '.'){
+        numberVal(num)
+    } else if (num === '-' || num === '+' || num === '/' || num === '*'){
+        operatorVal(num)
+    } else if (num === '=') {
+        equalsVal(num)
+        totalVal()
+    } else if (num === 'clear'){
+        clearVal()
+    }
+}
 
 function screenText(text) {
     var screen = document.getElementById('display')
@@ -24,12 +36,7 @@ function equalsVal(){
     finalNum = temp.join('')
     equation.push(finalNum)
     temp = []
-}
-
-function clearVal(){
-    screenText('')
-    temp = []
-    equation = []
+    finalNum = ''
 }
 
 function totalVal(){
@@ -39,7 +46,7 @@ function totalVal(){
         if (equation[i] === '+'){
            var total = (firstNum += secondVal)
         } else if (equation[i] === '-'){
-            total = (firstNum += secondVal)
+            total = (firstNum -= secondVal)
         } else if (equation[i] === '/'){
             total = (firstNum /= secondVal)
         } else if (equation[i] === '*'){
@@ -48,16 +55,8 @@ function totalVal(){
     } screenText(total)
 }
 
-function buttonEval(num){
-    var screen = document.getElementById('display')
-    if (typeof num === 'number' || num === '.'){
-        numberVal(num)
-    } else if (num === '-' || num === '+' || num === '/' || num === '*'){
-        operatorVal(num)
-    } else if (num === '=') {
-        equalsVal(num)
-        totalVal()
-    } else if (num === 'clear'){
-        clearVal()
-    }
+function clearVal(){
+    screenText('')
+    temp = []
+    equation = []
 }
