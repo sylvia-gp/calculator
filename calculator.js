@@ -9,7 +9,13 @@ function screenText(text) {
 
 function numberVal(num){
     temp.push(num);
-    estabScreen(temp.join(''));
+    screenText(temp.join(''));
+}
+
+function operatorVal(num){
+    equation.push(temp.join(''))
+    equation.push(num)
+    temp = []
 }
 
 function buttonEval(num){
@@ -42,8 +48,6 @@ function buttonEval(num){
             }
         }
     } else {
-        equation.push(temp.join(''));
-        equation.push(num);
-        temp = [];
+        operatorVal(num)
     }
 }
